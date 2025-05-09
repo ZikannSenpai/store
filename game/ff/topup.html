@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up Free Fire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <a href="https://zikannsenpai.github.io/home" class="logo-title">
+      <img src="asset/logo.jpg" alt="Logo Market" class="logo">
+      <span class="title">ZIKANN STORE</span>
+    </a>
+  </div>
+
+  <!-- Game Info Section -->
+  <div class="container">
+    <div class="game-header">
+      <img src="asset/ff.jpeg" alt="Free Fire" class="game-icon">
+      <div class="game-info">
+        <h3>Garena</h3>
+        <h2>Free Fire</h2>
+        <p>INSTANT TOP-UP</p>
+      </div>
+    </div>
+
+    <!-- Player ID Input -->
+    <div class="input-section">
+      <div class="step-number">1</div>
+      <h4>MASUKKAN ID PEMAIN ANDA</h4>
+      <input type="number" placeholder="ID Pemain" class="input-id" id="playerid">
+      <p class="instruction">
+        Untuk menemukan ID Pemain Anda, klik gambar avatar Anda di pojok kiri atas layar Anda.
+        ID Pemain Anda akan ditampilkan di bawah nama pengguna Anda.
+      </p>
+      <button class="btn-guide" onclick="toggleGuide()">Lihat Panduan</button>
+      <div class="guide-popup" id="guidePopup">
+        <img src="asset/guide.jpeg" alt="Panduan ID Pemain">
+        <p>Silahkan Relog dari game Free Fire Anda setelah melakukan Top Up</p>
+      </div>
+    </div>
+
+    <!-- Denomination Selection -->
+    <div class="denom-section">
+      <div class="step-number">2</div>
+      <h4>PILIH JUMLAH DENOM</h4>
+      <div class="denom-grid">
+        <div class="denom-item" onclick="selectDenom(this, 44299)">
+          <strong>Membership Bulanan</strong><br><span>dari</span><br>
+          <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 44.299</div>
+        </div>
+        <div class="denom-item" onclick="selectDenom(this, 14879)">
+          <strong>Level Up Pass</strong><br><span>dari</span><br>
+          <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 14.879</div>
+        </div>
+        <div class="denom-item" onclick="selectDenom(this, 29082)">
+          <strong>Membership Mingguan</strong><br><span>dari</span><br>
+          <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 29.082</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Method Section -->
+    <div class="payment-section">
+      <div class="step-number">3</div>
+      <h4>PILIH METODE PEMBAYARAN</h4>
+
+      <!-- E-Wallet Toggle -->
+      <div class="payment-method" onclick="toggleEwallet()">
+        <div class="method-title">
+          <img src="asset/ewallet.png" alt="E-Wallet" class="method-icon">
+          <strong>E-WALLET</strong><span class="method-price">IDR 44.299</span>
+        </div>
+      </div>
+
+      <!-- E-Wallet Options (Initially Hidden) -->
+      <div id="ewallet-options" class="ewallet-options hidden">
+        <div class="wallet-option" onclick="redirectToWA('QRIS')">
+          <img src="asset/qris.png" alt="QRIS">
+          <div class="wallet-info">
+            <span>QRIS</span>
+            <span class="price">IDR 44.299</span>
+          </div>
+        </div>
+        <div class="wallet-option" onclick="redirectToWA('ShopeePay')">
+          <img src="asset/spay.png" alt="ShopeePay">
+          <div class="wallet-info">
+            <span>ShopeePay</span>
+            <span class="price">IDR 44.299</span>
+          </div>
+        </div>
+        <div class="wallet-option" onclick="redirectToWA('DANA')">
+          <img src="asset/dana.jpeg" alt="DANA">
+          <div class="wallet-info">
+            <span>DANA</span>
+            <span class="price">IDR 44.299</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr style="height: 1px; background-color: black; border: none; width: 95%; opacity: 30%;">
+    
+  </div>
+      <section class="info-section">
+  <h2 class="info-title">ZIKANN STORE : Website top-up game paling terpercaya di Indonesia</h2>
+  <p class="info-description">
+    Setiap harinya, ribuan gamers di Indonesia menggunakan Juliantopup untuk melakukan top up game dengan lancar, tanpa perlu daftar atau login, dan diamonds/token game akan dikirimkan secara instan ke akun game anda. Top up game Mobile Legends, Free Fire, PUBGM, Mobile Legends dan berbagai macam game lainnya.
+  </p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <img src="asset/logo.jpg" alt="Jujur" class="info-icon">
+      <h4>Jujur & Terpercaya</h4>
+      <p>Setiap hari ada ribuan transaksi top-up game atau pembelian voucher yang dilakukan oleh pelanggan kami.</p>
+    </div>
+    <div class="info-box">
+      <img src="asset/wa.png" alt="Layanan Via WhatsApp" class="info-icon">
+      <h4>Layanan Via WhatsApp</h4>
+      <p>Custome Support kami siap membantu anda setiap hari, 7 hari dalam seminggu dan 30 hari dalam sebulan.</p>
+    </div>
+    <div class="info-box">
+      <img src="asset/share.png" alt="Instan" class="info-icon">
+      <h4>Pengiriman Instan</h4>
+      <p>Hanya butuh beberapa detik saja untuk menyelesaikan transaksi anda. Semua proses kami berjalan secara otomatis.</p>
+    </div>
+    <div class="info-box">
+      <img src="asset/like.png" alt="Murah" class="info-icon">
+      <h4>Pasti Lebih Murah</h4>
+      <p>Top-up game favoritmu dengan harga yang pastinya lebih murah dibandingkan website top-up lainnya.</p>
+    </div>
+  </div>
+</section>
+<hr style="height: 1px; background-color: black; border: none; width: 95%; opacity: 30%;">
+<h4>©Zikann Store 2025 || All rights reseved.</h4>
+  <script>
+    let selectedItemName = '';
+    let selectedPrice = '';
+
+    function toggleGuide() {
+      const popup = document.getElementById("guidePopup");
+      popup.style.display = popup.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleEwallet() {
+      const ewallet = document.getElementById("ewallet-options");
+      ewallet.classList.toggle("hidden");
+    }
+
+    function selectDenom(element, priceValue) {
+      selectedItemName = element.querySelector('strong').innerText;
+      selectedPrice = `IDR ${priceValue.toLocaleString('id-ID')}`;
+
+      document.querySelector('.method-price').innerText = selectedPrice;
+      document.querySelectorAll('.wallet-info .price').forEach(span => {
+        span.innerText = selectedPrice;
+      });
+
+      document.querySelectorAll('.denom-item').forEach(item => item.classList.remove('active'));
+      element.classList.add('active');
+    }
+
+    function redirectToWA(paymentMethod) {
+      const playerID = document.getElementById('playerid').value || "Belum diisi";
+      const itemName = selectedItemName || "Belum pilih item";
+      const price = selectedPrice || document.querySelector('.method-price').innerText;
+
+      const message = `TOP UP FREE FIRE\n\nID PEMAIN: ${playerID}\nNAMA ITEM: ${itemName}\nHARGA: ${price}\nMETODE PEMBAYARAN: ${paymentMethod}`;
+      const url = `https://wa.me/6285775359514?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
