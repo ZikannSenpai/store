@@ -1,4 +1,4 @@
-# TipengMarket - Toko Online Produk Kebutuhan Sehari-hari
+# ZikannStore - Online Game Shop
 
 Selamat datang di repositori resmi portofolio **TipengMarket**!  
 Website e-commerce ini dirancang untuk memudahkan pengguna dalam membeli berbagai kebutuhan harian secara online, dengan antarmuka yang sederhana dan responsif.
