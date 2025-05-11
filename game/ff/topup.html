@@ -196,9 +196,20 @@
     let selectedPrice = '';
 
     function toggleGuide() {
-      const popup = document.getElementById("guidePopup");
-      popup.style.display = popup.style.display === "block" ? "none" : "block";
-    }
+  const popup = document.getElementById("guidePopup");
+
+  if (popup.classList.contains("show")) {
+    popup.classList.remove("show");
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 500); // tunggu transisi selesai
+  } else {
+    popup.style.display = "block";
+    setTimeout(() => {
+      popup.classList.add("show");
+    }, 10); // beri delay kecil agar transisi bisa dimulai
+  }
+}
 
     function toggleEwallet() {
       const ewallet = document.getElementById("ewallet-options");
