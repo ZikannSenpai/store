@@ -103,7 +103,7 @@ body {
 .info-section {
   background-color: #a10f0f;
   color: white;
-  padding: 40px 20px;
+  padding: 1px 30px;
   text-align: center;
   min-height: 100vh; /* Tambahkan ini */
   display: flex;
@@ -132,7 +132,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 1px;
   gap: 20px;
 }
 
@@ -148,4 +148,30 @@ body {
   height: 40px;
   margin-bottom: 10px;
   border-radius: 50%;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.slider {
+  display: flex;
+  width: max-content;
+  animation: slide 5s linear infinite;
+}
+
+.slider img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
