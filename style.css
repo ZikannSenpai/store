@@ -71,15 +71,16 @@ body {
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  padding: 0 20px 40px;
+  padding: 0 10px 20px;
 }
 
 .product-card {
   background-color: #a00000;
-  border-radius: 16px;
+  width: 45%;
+  border-radius: 10px;
   overflow: hidden;
   color: white;
 }
@@ -92,8 +93,59 @@ body {
 }
 
 .product-card p {
-  margin: 10px 0;
-  padding: 0 10px;
+  margin: 5px 0;
+  padding: 0 5px;
   font-family: Impact, fantasy;
   font-weight: bold;
+  font-size: 5px;
+}
+
+.info-section {
+  background-color: #a10f0f;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh; /* Tambahkan ini */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+
+
+.info-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.info-description {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.info-box {
+  background: transparent;
+  max-width: 220px;
+  flex: 1 1 200px;
+  padding: 10px;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 50%;
 }
