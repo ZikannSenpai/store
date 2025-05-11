@@ -135,9 +135,15 @@ body {
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  transition: transform 0.1s ease;
+}
+
+.btn-guide:active {
+  transform: scale(0.95);
 }
 
 .guide-popup {
+		opacity: 0;
   display: none;
   background: #fff;
   border-radius: 8px;
@@ -147,6 +153,12 @@ body {
   max-width: 300px;
   position: relative;
   z-index: 10;
+		transition: opacity 0.05s ease;
+}
+
+.guide-popup.show {
+  display: block;
+  opacity: 1
 }
 
 .guide-popup img {
