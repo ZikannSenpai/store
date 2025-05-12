@@ -30,7 +30,7 @@
     <div class="input-section">
       <div class="step-number">1</div>
       <h4>MASUKKAN ID PEMAIN ANDA</h4>
-      <input type="number" placeholder="ID Pemain" class="input-id" id="playerid">
+      <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)" placeholder="ID Pemain" class="input-id" id="playerid">
       <p class="instruction">
         Untuk menemukan ID Pemain Anda, klik gambar avatar Anda di pojok kiri atas layar Anda.
         ID Pemain Anda akan ditampilkan di bawah nama pengguna Anda.
@@ -47,62 +47,6 @@
   <div class="step-number">2</div>
   <h4>PILIH JUMLAH DENOM</h4>
   <div class="denom-grid">
-    <div class="denom-item" onclick="selectDenom(this, 2000)">
-      <strong>10 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 2.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 9000)">
-      <strong>60 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 9.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 12000)">
-      <strong>80 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 12.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 14500)">
-      <strong>100 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 14.500</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 19000)">
-      <strong>140 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 19.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 30000)">
-      <strong>210 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 30.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 56000)">
-      <strong>405 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 56.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 70500)">
-      <strong>510 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 70.500</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 107000)">
-      <strong>790 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 107.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 117000)">
-      <strong>860 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 117.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 136000)">
-      <strong>1000 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 136.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 188000)">
-      <strong>1450 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 188.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 245000)">
-      <strong>1850 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 245.000</div>
-    </div>
-    <div class="denom-item" onclick="selectDenom(this, 285000)">
-      <strong>2180 DM</strong><br><span>dari</span><br>
-      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 285.000</div>
-    </div>
         <div class="denom-item" onclick="selectDenom(this, 88000)">
           <strong>Membership Bulanan</strong><br><span>dari</span><br>
           <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 88,000</div>
@@ -115,8 +59,64 @@
           <strong>Membership Mingguan</strong><br><span>dari</span><br>
           <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 30,500</div>
         </div>
-      </div>
+    <div class="denom-item" onclick="selectDenom(this, 2000)">
+      <strong>10 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 2,000</div>
     </div>
+    <div class="denom-item" onclick="selectDenom(this, 9000)">
+      <strong>60 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 9,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 12000)">
+      <strong>80 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 12,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 14500)">
+      <strong>100 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 14,500</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 19000)">
+      <strong>140 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 19,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 30000)">
+      <strong>210 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 30,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 56000)">
+      <strong>405 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 56,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 70500)">
+      <strong>510 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 70,500</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 107000)">
+      <strong>790 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 107,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 117000)">
+      <strong>860 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 117,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 136000)">
+      <strong>1000 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 136,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 188000)">
+      <strong>1450 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 188,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 245000)">
+      <strong>1850 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 245,000</div>
+    </div>
+    <div class="denom-item" onclick="selectDenom(this, 285000)">
+      <strong>2180 DM</strong><br><span>dari</span><br>
+      <div class="price"><img src="asset/diamond.png" class="icon-diamond">IDR 285,000</div>
+    </div>
+  </div>
+</div>
 
     <!-- Payment Method Section -->
     <div class="payment-section">
@@ -127,7 +127,7 @@
       <div class="payment-method" onclick="toggleEwallet()">
         <div class="method-title">
           <img src="asset/ewallet.png" alt="E-Wallet" class="method-icon">
-          <strong>E-WALLET</strong><span class="method-price">IDR 88.000</span>
+          <strong>E-WALLET</strong><span class="method-price">SILAHKAN PILIH ITEM</span>
         </div>
       </div>
 
@@ -137,28 +137,28 @@
           <img src="asset/qris.png" alt="QRIS">
           <div class="wallet-info">
             <span>QRIS</span>
-            <span class="price">IDR 88.000</span>
+            <span class="price">IDR 00.000</span>
           </div>
         </div>
         <div class="wallet-option" onclick="redirectToWA('ShopeePay')">
           <img src="asset/spay.png" alt="ShopeePay">
           <div class="wallet-info">
             <span>ShopeePay</span>
-            <span class="price">IDR 88.000</span>
+            <span class="price">IDR 00.000</span>
           </div>
         </div>
         <div class="wallet-option" onclick="redirectToWA('DANA')">
           <img src="asset/dana.jpeg" alt="DANA">
           <div class="wallet-info">
             <span>DANA</span>
-            <span class="price">IDR 88.000</span>
+            <span class="price">IDR 00.000</span>
           </div>
         </div>
       </div>
     </div>
-    
+
     <hr style="height: 1px; background-color: black; border: none; width: 95%; opacity: 30%;">
-    
+
   </div>
       <section class="info-section">
   <h2 class="info-title">ZIKANN STORE : Website top-up game paling terpercaya di Indonesia</h2>
@@ -202,7 +202,7 @@
     popup.classList.remove("show");
     setTimeout(() => {
       popup.style.display = "none";
-    }, 500); // tunggu transisi selesai
+    }, 100); // tunggu transisi selesai
   } else {
     popup.style.display = "block";
     setTimeout(() => {
@@ -213,7 +213,27 @@
 
     function toggleEwallet() {
       const ewallet = document.getElementById("ewallet-options");
-      ewallet.classList.toggle("hidden");
+      const method = document.querySelector(".payment-method");
+      
+      method.classList.add("clicked");
+      setTimeout(() => {
+        
+        method.classList.remove("clicked");
+      }, 200);
+      
+      if (ewallet.classList.contains("show")) {
+        
+        ewallet.classList.remove("show");
+        setTimeout(() => {
+          ewallet.style.display = "none";
+        }, 200);
+      } else {
+        ewallet.style.display = "block";
+        setTimeout(() => {
+          
+          ewallet.classList.add("show");
+        }, 10)
+      }
     }
 
     function selectDenom(element, priceValue) {
